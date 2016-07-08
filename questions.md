@@ -1,10 +1,13 @@
 ##JS
 - Explain event delegation
+With event delegation, we're able to add an event listener to the parent element and target any children elements that way. This saves us from having to add/remove event listeners if children elements are frequently added or deleted. A shortfall of this is if you're adding an element to the list via a script/jQuery - the event listener won't be attached to it (after the fact).
 - Explain how this works in JavaScript
 - Explain how prototypal inheritance works
 - What do you think of AMD vs CommonJS?
 - Explain why the following doesn't work as an IIFE: function foo(){ }();.
   - What needs to be changed to properly make it an IIFE?
+it should be this: (function foo(){ })();
+IIFE's are wrapped in parens
 - What's the difference between a variable that is: null, undefined or undeclared?
   - How would you go about checking for any of these states?
 - What is a closure, and how/why would you use one?
@@ -22,11 +25,13 @@
 - Have you ever used JavaScript templating?
   - If so, what libraries have you used?
 - Explain "hoisting".
+Hoisting refers to functions in the global scope (declared or expression) that are able to be executed even when defined below the call. JS parses through a script file first to find the functions, "hoists" them to the top, and then parses through the code on a second run.
 - Describe event bubbling.
 - What's the difference between an "attribute" and a "property"?
 - Why is extending built-in JavaScript objects not a good idea?
 - Difference between document load event and document DOMContentLoaded event?
 - What is the difference between == and ===?
+== allows for type conversion, i.e. 0 == false and 1 == "1" both qualify as true. However, in each instance if you used === they would be false
 - Explain the same-origin policy with regards to JavaScript.
 - Make this work:
 ```js
@@ -35,6 +40,19 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 - Why is it called a Ternary expression, what does the word "Ternary" indicate?
 - What is "use strict";? what are the advantages and disadvantages to using it?
 - Create a for loop that iterates up to 100 while outputting "fizz" at multiples of 3, "buzz" at multiples of 5 and "fizzbuzz" at multiples of 3 and 5
+```js
+for (var i=1; i <= 100; i++){
+  if(i%5==0 && i%3==0){
+    console.log("FizzBuzz");
+  }else if(i%5==0){
+    console.log("buzz");
+  }else if(i%3==0){
+    console.log("fizz");
+  }else{
+    console.log(i);
+  }
+}
+```
 - Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
 - Why would you use something like the load event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
 - Explain what a single page app is and how to make one SEO-friendly.
