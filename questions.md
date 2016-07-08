@@ -54,6 +54,7 @@ for (var i=1; i <= 100; i++){
 }
 ```
 - Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
+Several reasons. 1) harder to read code 2)anyone can update a global variable from any point in the program at any time (and from any thread if there’s more than one going) 3)code smell/cutting corners 4)can encounter global variable name clashes
 - Why would you use something like the load event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
 - Explain what a single page app is and how to make one SEO-friendly.
 - What is the extent of your experience with Promises and/or their polyfills?
