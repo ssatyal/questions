@@ -57,6 +57,7 @@ for (var i=1; i <= 100; i++){
 Several reasons. 1) harder to read code 2)anyone can update a global variable from any point in the program at any time (and from any thread if there’s more than one going) 3)code smell/cutting corners 4)can encounter global variable name clashes
 - Why would you use something like the load event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
 - Explain what a single page app is and how to make one SEO-friendly.
+A single page app is a website that loads the main container and then yields views based on user clicks. An example of a framework of this is Angular, where you can have different views populate the browser without refreshing the page. Tips for SEO: Paginate content, organize CSS for spiders, seek authority, multiple H1 tags, readability, "keep it fresh"
 - What is the extent of your experience with Promises and/or their polyfills?
 - What are the pros and cons of using Promises instead of callbacks?
 - What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
@@ -95,9 +96,13 @@ In quirks mode, layout emulates nonstandard behavior in Navigator 4 and Internet
 
 ##CSS
 - What is the difference between classes and IDs in CSS?
+Both are "hooks", i.e. selectors, but IDs are unique and should only be used once. Classes can be used on multiple elements. IDs also can be used in url anchoring (www.example.com/index#comments).
 - What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
+CSS resets strip down all the html formatting, leaving you with the ability to customize everything. Normalizing doesn't "unstyle" everything, so it preserves styles in browsers. For small projects, Normalize is fine. If I'm building a large scale project, I'd use reset.
 - Describe Floats and how they work.
+Floats move an image or an element to a certain part of the page to allow other content to wrap around it (while still following the "flow" of the page). A float mimics print media in this way.
 - Describe z-index and how stacking context is formed.
+Z-index allows for vertical stacking of elements on top of other elements. These elements have to be positioned non-statically (static being the default positioning value). Higher z-index gets stacked "closer" to the viewer. 
 - Describe BFC(Block Formatting Context) and how it works.
 - What are the various clearing techniques and which is appropriate for what context?
 - Explain CSS sprites, and how you would implement them on a page or site.
