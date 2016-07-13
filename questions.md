@@ -83,10 +83,12 @@ DOCTYPEs are required for legacy reasons. When omitted, browsers tend to use a d
 In quirks mode, layout emulates nonstandard behavior in Navigator 4 and Internet Explorer 5. This is essential in order to support websites that were built before the widespread adoption of web standards. In full standards mode, the behavior is (hopefully) the behavior described by the HTML and CSS specifications. In almost standards mode, there are only a very small number of quirks implemented.
 
 - What's the difference between HTML and XHTML?
+XHTML is 'stricter', it mimics XML markup. The HTML I write very much follows XHTML guidelines!
 - Are there any problems with serving pages as application/xhtml+xml?
 - How do you serve a page with content in multiple languages?
 - What kind of things must you be wary of when design or developing for multilingual sites?
 - What are data- attributes good for?
+It's good to prefix to custom attributes. For example, angular uses "ng-" in it's html. This would fail a validator, so prefixing it with "data-" would allow it to pass validation.
 - Consider HTML5 as an open web platform. What are the building blocks of HTML5?
 - Describe the difference between a cookie, sessionStorage and localStorage.
 - Describe the difference between <script>, <script async> and <script defer>.
@@ -102,7 +104,7 @@ CSS resets strip down all the html formatting, leaving you with the ability to c
 - Describe Floats and how they work.
 Floats move an image or an element to a certain part of the page to allow other content to wrap around it (while still following the "flow" of the page). A float mimics print media in this way.
 - Describe z-index and how stacking context is formed.
-Z-index allows for vertical stacking of elements on top of other elements. These elements have to be positioned non-statically (static being the default positioning value). Higher z-index gets stacked "closer" to the viewer. 
+Z-index allows for vertical stacking of elements on top of other elements. These elements have to be positioned non-statically (static being the default positioning value). Higher z-index gets stacked "closer" to the viewer.
 - Describe BFC(Block Formatting Context) and how it works.
 - What are the various clearing techniques and which is appropriate for what context?
 - Explain CSS sprites, and how you would implement them on a page or site.
