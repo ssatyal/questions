@@ -107,6 +107,7 @@ Floats move an image or an element to a certain part of the page to allow other 
 Z-index allows for vertical stacking of elements on top of other elements. These elements have to be positioned non-statically (static being the default positioning value). Higher z-index gets stacked "closer" to the viewer.
 - Describe BFC(Block Formatting Context) and how it works.
 - What are the various clearing techniques and which is appropriate for what context?
+I prefer to use the overflow: auto method. You can also place an empty div of <div style="clear:both;"></div> after the last floated item to do so, but then you clutter the html.
 - Explain CSS sprites, and how you would implement them on a page or site.
 - What are your favourite image replacement techniques and which do you use when?
 - How would you approach fixing browser-specific styling issues?
